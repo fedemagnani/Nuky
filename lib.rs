@@ -39,6 +39,11 @@ mod spread_money {
             instance
         }
 
+        #[ink(message)]
+        pub fn edit_method(&mut self){
+            self.splitter.total_shares.set(&100);
+        }
+
         // Any other smart contract method has the macro #[ink(message)] and is public
         #[ink(message)]
         pub fn shoot_money(&mut self)-> Result<(), PaymentSplitterError>{

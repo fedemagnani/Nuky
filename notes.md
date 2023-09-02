@@ -7,3 +7,5 @@ A smart contract is a module:
 Differently from Solidity, the variables belonging to a parent smart contract are not directly accessible. To access those variables. Indeed, the parent smart contract is actually saved in the storage of the child smart contract; moreover, to edit the variables of the parent smart contract, you need to use the methods of the parent smart contract taking the mutable reference as input parameter. 
 
 Events are struct anticipated by macro #[ink(event)] and are emitted via self.env().emit_event(Evento)
+
+To edit Lazy variables use the "set()" method (evaluating reference)
